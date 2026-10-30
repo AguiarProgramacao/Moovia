@@ -1,0 +1,63 @@
+import type { Ad, Folder } from "../types";
+export const initialFolders: Folder[] = [
+  { id: "own", name: "Minhas Empresas", color: "blue" },
+  { id: "partners", name: "Empresas Parceiras", color: "purple" },
+  { id: "promo", name: "Campanhas Promocionais", color: "orange" },
+  { id: "archive", name: "Anúncios Arquivados", color: "gray" },
+];
+export const mockAds: Ad[] = [
+  {
+    id: "1",
+    name: "P&F Dedetizadora — Institucional",
+    type: "image",
+    folderId: "own",
+    date: "2026-10-25",
+    size: "2,4 MB",
+    design: "pest",
+  },
+  {
+    id: "2",
+    name: "Polaris Technologies — Conexões",
+    type: "image",
+    folderId: "own",
+    date: "2026-10-24",
+    size: "1,8 MB",
+    design: "tech",
+  },
+  {
+    id: "3",
+    name: "Restaurante Parceiro — Novo menu",
+    type: "image",
+    folderId: "partners",
+    date: "2026-10-23",
+    size: "3,2 MB",
+    design: "food",
+  },
+  {
+    id: "4",
+    name: "Promoção Especial — Black Friday",
+    type: "image",
+    folderId: "promo",
+    date: "2026-10-22",
+    size: "2,1 MB",
+    design: "sale",
+  },
+  {
+    id: "5",
+    name: "Polaris Technologies — O futuro",
+    type: "image",
+    folderId: "own",
+    date: "2026-10-21",
+    size: "1,6 MB",
+    design: "future",
+  },
+  {
+    id: "6",
+    name: "Restaurante Parceiro — Delivery",
+    type: "image",
+    folderId: "partners",
+    date: "2026-10-20",
+    size: "2,8 MB",
+    design: "delivery",
+  },
+];

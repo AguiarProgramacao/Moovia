@@ -1,0 +1,8 @@
+project_id = "vcmzokmwafgiuncxcmah"
+
+[auth]
+additional_redirect_urls = [
+  "http://localhost:5173/login?recovery=1",
+  "http://127.0.0.1:5173/login?recovery=1",
+  "https://moovia-six.vercel.app/login?recovery=1",
+]

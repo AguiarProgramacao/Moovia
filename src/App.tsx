@@ -5,6 +5,8 @@ import Login from "./pages/Login";
 import AdsLibrary from "./pages/AdsLibrary";
 import { useAuth } from "./contexts/AuthContext";
 import { LoaderCircle } from "lucide-react";
+import Advertise from "./pages/Advertise";
+import Leads from "./pages/Leads";
 export default function App() {
   const [dark, setDark] = useStoredState("movvia-dark", false);
   useEffect(() => {
@@ -21,6 +23,7 @@ export default function App() {
     );
   return (
     <Routes>
+      <Route path="/anuncie" element={<Advertise />} />
       <Route
         path="/"
         element={
@@ -50,6 +53,7 @@ export default function App() {
           )
         }
       />
+      <Route path="/interessados" element={user && !recoveryMode ? <Leads /> : <Navigate to="/login" replace />} />
     </Routes>
   );
 }

@@ -54,7 +54,7 @@ export default function Sidebar({
         <nav>
           {[
             { label: "Anúncios", icon: Images },
-            { label: "Campanhas", icon: Megaphone },
+            { label: "Interessados", icon: Megaphone },
             { label: "Motoristas", icon: CarFront },
             { label: "Dispositivos", icon: Monitor },
             { label: "Relatórios", icon: ChartNoAxesCombined },
@@ -62,13 +62,16 @@ export default function Sidebar({
           ].map(({ label, icon: Icon }, i) => (
             <button
               key={label}
-              disabled={i !== 0}
+              disabled={i > 1}
               className={`nav-item ${i === 0 ? "active" : ""}`}
-              onClick={close}
+              onClick={() => {
+                if (i === 1) navigate("/interessados");
+                close();
+              }}
             >
               <Icon size={19} />
               {label}
-              {i > 0 && <span>Em breve</span>}
+              {i > 1 && <span>Em breve</span>}
             </button>
           ))}
         </nav>

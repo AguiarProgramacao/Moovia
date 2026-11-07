@@ -62,6 +62,34 @@ export type Database = {
           },
         ];
       };
+      advertising_leads: {
+        Row: {
+          id: string;
+          name: string;
+          company: string;
+          whatsapp: string;
+          city: string;
+          message: string | null;
+          source: string;
+          status: "novo" | "contatado" | "fechado" | "arquivado";
+          created_at: string;
+        };
+        Insert: {
+          id?: string;
+          name: string;
+          company: string;
+          whatsapp: string;
+          city: string;
+          message?: string | null;
+          source?: string;
+          status?: "novo" | "contatado" | "fechado" | "arquivado";
+          created_at?: string;
+        };
+        Update: {
+          status?: "novo" | "contatado" | "fechado" | "arquivado";
+        };
+        Relationships: [];
+      };
     };
     Views: { [_ in never]: never };
     Functions: {
